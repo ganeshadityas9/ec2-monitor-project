@@ -30,12 +30,5 @@ jobs:
       - name: Validate SAM Template
         run: sam validate
       - name: Deploy SAM Application
-        run: |
-          sam deploy
-            --stack-name ec2-monitor-stack
-            --s3-bucket ganesh-sam-deploy--2026
-            --region us-east-1
-            --capabilities CAPABILITY_IAM
-            --no-confirm-changeset
-            --no-fail-on-empty-changeset
+        run: sam deploy --stack-name ec2-monitor-stack --s3-bucket ganesh-sam-deploy--2026 --region us-east-1 --capabilities CAPABILITY_IAM --no-confirm-changeset --no-fail-on-empty-changeset
 
